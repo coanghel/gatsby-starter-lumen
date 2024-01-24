@@ -1,7 +1,12 @@
+version: "3.8"
 services:
-  frontend:
+  gatsby:
+    image: gatsby-docker
     build:
       context: .
+      target: deploy
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
     networks:
       - reverse-proxy-network
 networks:
