@@ -4,11 +4,13 @@ exports[`Sidebar renders correctly 1`] = `
 <div>
   <div>
     <div>
-      <a />
+      <a
+        href="https://www.lumen.local"
+      />
       <div>
         <h1>
           <a
-            href="/"
+            href="https://www.lumen.local"
           >
             John Doe
           </a>

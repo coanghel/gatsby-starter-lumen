@@ -5,9 +5,7 @@ exports[`Author renders correctly 1`] = `
   <a />
   <div>
     <h2>
-      <a
-        href="/"
-      >
+      <a>
         John Doe
       </a>
     </h2>

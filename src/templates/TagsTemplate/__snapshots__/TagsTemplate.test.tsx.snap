@@ -5,11 +5,13 @@ exports[`TagsTemplate renders correctly 1`] = `
   <div>
     <div>
       <div>
-        <a />
+        <a
+          href="https://www.lumen.local"
+        />
         <div>
           <h2>
             <a
-              href="/"
+              href="https://www.lumen.local"
             >
               John Doe
             </a>

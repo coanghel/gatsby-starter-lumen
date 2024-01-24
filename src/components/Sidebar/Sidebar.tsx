@@ -14,12 +14,12 @@ type Props = {
 };
 
 const Sidebar = ({ isIndex }: Props) => {
-  const { author, copyright, menu } = useSiteMetadata();
+  const { author, copyright, menu, url } = useSiteMetadata();
 
   return (
     <div className={styles.sidebar}>
       <div className={styles.inner}>
-        <Author author={author} isIndex={isIndex} />
+        <Author author={author} isIndex={isIndex} url={url} />
         <Menu menu={menu} />
         <Contacts contacts={author.contacts} />
         <Copyright copyright={copyright} />
