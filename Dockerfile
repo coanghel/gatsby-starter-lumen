@@ -12,7 +12,7 @@ COPY . /code
 CMD ["npm", "start"]
 
 FROM development AS build
-RUN npm run build
+RUN npm run build:path
 
 FROM nginx:alpine AS production
 RUN rm /etc/nginx/nginx.conf /etc/nginx/conf.d/default.conf
