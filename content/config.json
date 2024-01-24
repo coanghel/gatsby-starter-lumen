@@ -1,7 +1,7 @@
 {
-  "title": "Blog by John Doe",
-  "url": "https://lumen.alxshelepenok.com",
-  "subtitle": "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
+  "title": "Blog by Costin Anghel",
+  "url": "https://www.costin.rocks/blog",
+  "subtitle": "A static blog using Gatsby.JS mostly focused on development and rock climbing.",
   "copyright": "© All rights reserved.",
   "googleAnalyticsId": "UA-73379983-2",
   "disqusShortname": "",
@@ -11,30 +11,22 @@
     {
       "label": "Articles",
       "path": "/"
-    },
-    {
-      "label": "About me",
-      "path": "/pages/about"
-    },
-    {
-      "label": "Contact me",
-      "path": "/pages/contacts"
     }
   ],
   "author": {
-    "name": "John Doe",
+    "name": "Costin Anghel",
     "photo": "/photo.jpg",
-    "bio": "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
+    "bio": "Just a place to store and organize my thoughts.",
     "contacts": {
       "rss": "",
-      "email": "",
-      "github": "#",
-      "facebook": "#",
-      "telegram": "#",
-      "twitter": "#",
-      "linkedin": "#",
-      "instagram": "#",
-      "mastodon": "#",
+      "email": "costin.anghel@costin.rocks",
+      "github": "https://github.com/coanghel",
+      "facebook": "https://www.facebook.com/costin.anghel/",
+      "telegram": "",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/costin-anghel-365b2360/",
+      "instagram": "",
+      "mastodon": "",
       "line": "",
       "weibo": "",
       "gitlab": "",
