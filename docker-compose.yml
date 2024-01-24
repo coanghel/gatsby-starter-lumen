@@ -1,0 +1,10 @@
+services:
+  frontend:
+    build:
+      context: .
+    networks:
+      - reverse-proxy-network
+networks:
+  reverse-proxy-network:
+    name: reverse-proxy-network
+    external: true
