@@ -9,7 +9,7 @@ RUN yarn build
 FROM nginx:alpine AS deploy
 
 WORKDIR /usr/share/nginx/html
-RUN rm -rf ./
+RUN rm -rf ./*
 RUN rm /etc/nginx/nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /app/public .
 
