@@ -11,12 +11,10 @@ COPY . /code
 
 CMD ["npm", "start"]
 
-FROM development as production
-
+FROM development AS build
 RUN npm run build
 
-FROM nginx:alpine
+FROM nginx:alpine AS production
 RUN rm /etc/nginx/nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=production /code/public /var/www
-
+COPY --from=build /code/public /var/www
 CMD [ "nginx", "-g", "daemon off;" ]

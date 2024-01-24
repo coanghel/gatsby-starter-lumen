@@ -1,6 +1,7 @@
 version: "3.8"
 services:
   gatsby:
+    container_name: gatsby
     image: gatsby-docker
     build:
       context: .
