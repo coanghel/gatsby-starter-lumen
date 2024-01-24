@@ -13,12 +13,13 @@ type Props = {
     bio: string;
     photo: string;
   };
+  url: string;
   isIndex?: boolean;
 };
 
-const Author = ({ author, isIndex }: Props) => (
+const Author = ({ author, isIndex, url }: Props) => (
   <div className={styles.author}>
-    <Link to="/">
+    <Link to={url}>
       <Image alt={author.name} path={author.photo} className={styles.photo} />
     </Link>
 

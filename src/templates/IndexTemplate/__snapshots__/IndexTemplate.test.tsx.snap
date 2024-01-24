@@ -5,9 +5,7 @@ exports[`IndexTemplate renders correctly 1`] = `
   <div>
     <div>
       <div>
-        <a
-          href="/"
-        />
+        <a />
         <div>
           <h1>
             <a

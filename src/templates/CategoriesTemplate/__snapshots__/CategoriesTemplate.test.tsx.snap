@@ -5,9 +5,7 @@ exports[`CategoriesTemplate renders correctly 1`] = `
   <div>
     <div>
       <div>
-        <a
-          href="/"
-        />
+        <a />
         <div>
           <h2>
             <a
