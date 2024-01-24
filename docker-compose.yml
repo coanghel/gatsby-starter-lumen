@@ -4,7 +4,7 @@ services:
     image: gatsby-docker
     build:
       context: .
-      target: deploy
+      target: production
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
     networks:

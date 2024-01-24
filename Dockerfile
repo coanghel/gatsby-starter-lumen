@@ -1,16 +1,22 @@
-FROM node:current-alpine AS build
+FROM node:lts AS development
 
-WORKDIR /app
-COPY . .
+ENV CI=true
+ENV PORT=3000
 
-RUN yarn
-RUN yarn build
+WORKDIR /code
+COPY package.json /code/package.json
+COPY package-lock.json /code/package-lock.json
+RUN npm ci
+COPY . /code
 
-FROM nginx:alpine AS deploy
+CMD ["npm", "start"]
 
-WORKDIR /usr/share/nginx/html
-RUN rm -rf ./*
+FROM development as production
+
+RUN npm run build
+
+FROM nginx:alpine
 RUN rm /etc/nginx/nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=build /app/public .
+COPY --from=production /code/public /var/www
 
-ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
+CMD [ "nginx", "-g", "daemon off;" ]
