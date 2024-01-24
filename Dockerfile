@@ -6,7 +6,7 @@ COPY . .
 RUN yarn
 RUN yarn build
 
-FROM nginx:alpine AS deplopy
+FROM nginx:alpine AS deploy
 
 WORKDIR /usr/share/nginx/html
 RUN rm -rf ./
