@@ -1,6 +1,7 @@
 {
   "name": "gatsby-starter-lumen",
   "version": "1.4.1234",
+  "homepage": ".",
   "description": "A constantly evolving and thoughtful architecture for creating static blogs with Gatsby",
   "keywords": [
     "gatsby",
@@ -16,6 +17,7 @@
   "author": "Alexander Shelepenok <alxshelepenok@gmail.com>",
   "scripts": {
     "build": "npm run clean && gatsby build",
+    "build:path": "npm run clean && gatsby build --prefix-paths",
     "clean": "rimraf .cache public",
     "format": "npm run format:ts && npm run format:scss",
     "format:scss": "stylelint \"src/**/*.scss\" --fix",

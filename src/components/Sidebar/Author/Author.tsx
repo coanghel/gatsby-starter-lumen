@@ -1,7 +1,5 @@
 import React from "react";
 
-import { Link } from "gatsby";
-
 import { Image } from "@/components/Image";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
@@ -13,27 +11,28 @@ type Props = {
     bio: string;
     photo: string;
   };
+  url: string;
   isIndex?: boolean;
 };
 
-const Author = ({ author, isIndex }: Props) => (
+const Author = ({ author, isIndex, url }: Props) => (
   <div className={styles.author}>
-    <Link to="/">
+    <a href={url}>
       <Image alt={author.name} path={author.photo} className={styles.photo} />
-    </Link>
+    </a>
 
     <div className={styles.titleContainer}>
       {isIndex ? (
         <h1 className={styles.title}>
-          <Link className={styles.link} to="/">
+          <a href={url} className={styles.link}>
             {author.name}
-          </Link>
+          </a>
         </h1>
       ) : (
         <h2 className={styles.title}>
-          <Link className={styles.link} to="/">
+          <a href={url} className={styles.link}>
             {author.name}
-          </Link>
+          </a>
         </h2>
       )}
       <ThemeSwitcher />
